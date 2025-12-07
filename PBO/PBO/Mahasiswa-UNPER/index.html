@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahasiswa UNPER - To-Do List & Task Manager</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icon untuk bottom navigation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-content">
+                <h1>Selamat Datang di Mahasiswa UNPER</h1>
+                <p>Atur tugas dan jadwal kuliah Anda dengan lebih efisien</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="quick-stats">
+                <div class="stat-card">
+                    <h3>Total Tugas Aktif</h3>
+                    <p id="total-tasks">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Deadline Hari Ini</h3>
+                    <p id="today-deadlines">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Tugas Telat</h3>
+                    <p id="late-tasks">0</p>
+                </div>
+            </div>
+
+            <section class="urgent-tasks">
+                <h2>Tugas Mendesak/Hari Ini</h2>
+                <div id="urgent-tasks-list">
+                    <!-- Daftar tugas mendesak akan dimunculkan di sini -->
+                    <p class="no-tasks">Tidak ada tugas mendesak saat ini</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Floating Action Button -->
+        <button class="fab" id="add-task-btn">
+            <i class="fas fa-plus"></i>
+        </button>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="home.html" class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Beranda</span>
+            </a>
+            <a href="calendar.html" class="nav-item">
+                <i class="fas fa-calendar"></i>
+                <span>Kalender</span>
+            </a>
+            <a href="add_task.html" class="nav-item">
+                <i class="fas fa-plus-circle"></i>
+                <span>Tambah</span>
+            </a>
+            <a href="tasks.html" class="nav-item">
+                <i class="fas fa-tasks"></i>
+                <span>Tugas</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>Profil</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

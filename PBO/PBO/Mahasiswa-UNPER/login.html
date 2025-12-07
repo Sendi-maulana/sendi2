@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mahasiswa UNPER</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="login-container">
+            <div class="login-header">
+                <h1>Mahasiswa UNPER</h1>
+                <p>Sistem Manajemen Tugas & Jadwal Kuliah</p>
+            </div>
+            
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email/NIM</label>
+                    <input type="text" id="email" name="email" placeholder="Masukkan email atau NIM Anda" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Masukkan password Anda" required>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+                
+                <div class="form-group">
+                    <a href="#" id="forgotPassword">Lupa Password?</a>
+                </div>
+            </form>
+            
+            <div class="register-section">
+                <p>Belum punya akun? <a href="#" id="registerLink">Daftar di sini</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

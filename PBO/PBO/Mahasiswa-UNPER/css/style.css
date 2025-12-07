@@ -1,0 +1,382 @@
+/* Reset dan variabel CSS */
+:root {
+    /* Warna primer UNPER */
+    --primary-color: #003366; /* Biru tua */
+    --secondary-color: #CC0000; /* Merah */
+    
+    /* Warna pendukung */
+    --success-color: #28a745; /* Hijau untuk selesai */
+    --danger-color: #dc3545; /* Merah untuk mendesak */
+    --warning-color: #ffc107; /* Kuning/orange untuk tinggi */
+    --info-color: #17a2b8; /* Biru muda */
+    
+    /* Warna teks */
+    --text-dark: #333;
+    --text-light: #666;
+    --text-white: #fff;
+    
+    /* Latar belakang */
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    
+    /* Warna untuk tema gelap */
+    --dark-bg: #121212;
+    --dark-surface: #1e1e1e;
+    --dark-text: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Container utama */
+.app-container {
+    max-width: 500px;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 80px; /* Ruang untuk bottom navigation */
+}
+
+/* Header */
+.main-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header-content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.header-content p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Konten utama */
+.main-content {
+    padding: 20px;
+}
+
+/* Statistik cepat */
+.quick-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: var(--bg-white);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--primary-color);
+}
+
+.stat-card h3 {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Bagian tugas mendesak */
+.urgent-tasks h2 {
+    margin-bottom: 15px;
+    color: var(--text-dark);
+    font-size: 1.2rem;
+}
+
+#urgent-tasks-list {
+    background: var(--bg-white);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.task-card {
+    background: var(--bg-white);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--info-color); /* Default warna */
+    display: flex;
+    align-items: center;
+}
+
+.task-card.priority-mendesak {
+    border-left-color: var(--danger-color);
+}
+
+.task-card.priority-tinggi {
+    border-left-color: var(--warning-color);
+}
+
+.task-card.priority-sedang {
+    border-left-color: var(--info-color);
+}
+
+.task-card.priority-rendah {
+    border-left-color: #6c757d;
+}
+
+.task-card .task-checkbox {
+    margin-right: 10px;
+}
+
+.task-card .task-info {
+    flex: 1;
+}
+
+.task-card .task-title {
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.task-card .task-course {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    background: var(--bg-light);
+    padding: 2px 6px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.task-card .task-deadline {
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.no-tasks {
+    text-align: center;
+    color: var(--text-light);
+    padding: 20px 0;
+    font-style: italic;
+}
+
+/* Floating Action Button */
+.fab {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fab:hover {
+    background-color: #002244;
+    transform: scale(1.05);
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    border-top: 1px solid #eee;
+    height: 60px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 0.7rem;
+}
+
+.nav-item.active {
+    color: var(--primary-color);
+}
+
+.nav-item i {
+    font-size: 1.2rem;
+    margin-bottom: 3px;
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #002244;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Halaman login */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h1 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.login-form .form-group:last-child {
+    margin-bottom: 0;
+}
+
+/* Toggle untuk pengingat */
+.reminder-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.reminder-toggle input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Warna untuk tema gelap */
+body.dark-theme {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+body.dark-theme .main-header {
+    background: linear-gradient(135deg, #0a2440, #4d0000);
+}
+
+body.dark-theme .stat-card,
+body.dark-theme #urgent-tasks-list,
+body.dark-theme .task-card,
+body.dark-theme .login-container {
+    background: var(--dark-surface);
+    color: var(--dark-text);
+}
+
+body.dark-theme .form-group input,
+body.dark-theme .form-group textarea,
+body.dark-theme .form-group select {
+    background: var(--dark-surface);
+    color: var(--dark-text);
+    border-color: #333;
+}
+
+body.dark-theme .bottom-nav {
+    background-color: var(--dark-surface);
+    border-top-color: #333;
+}
+
+body.dark-theme .nav-item {
+    color: var(--dark-text);
+}
+
+/* Responsif */
+@media (max-width: 480px) {
+    .app-container {
+        padding: 0;
+    }
+    
+    .quick-stats {
+        flex-direction: column;
+    }
+    
+    .main-content {
+        padding: 15px;
+    }
+}

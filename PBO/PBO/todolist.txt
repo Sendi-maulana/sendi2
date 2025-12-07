@@ -1,0 +1,183 @@
+Ringkasan Aplikasi: Mahasiswa UNPER - To-Do List
+Nama Aplikasi: Mahasiswa UNPER (To-Do List & Task Manager)
+
+Deskripsi Singkat:
+Aplikasi To-Do List khusus mahasiswa Universitas Perjuangan (UNPER) yang dirancang untuk membantu mengorganisir kehidupan akademik dan personal secara efisien. Aplikasi ini tidak hanya berfungsi sebagai daftar tugas biasa, tetapi juga menyediakan fitur-fitur kontekstual yang relevan dengan dunia perkuliahan seperti pengelolaan deadline tugas, jadwal kuliah, prioritas berdasarkan tingkat kesulitan mata kuliah, dan sistem pengingat yang cerdas.
+
+Tujuan: Meningkatkan produktivitas, manajemen waktu, dan mengurangi stres akademik mahasiswa UNPER dengan alat yang terintegrasi dan mudah digunakan.
+
+Target Pengguna: Seluruh mahasiswa UNPER dari semua fakultas dan angkatan.
+
+Runtutan Fitur (Prioritas)
+Fitur Inti (Versi 1.0 - MVP)
+Manajemen Tugas Dasar:
+
+Buat, Baca, Perbarui, Hapus (CRUD) tugas.
+
+Field Tugas: Judul, Deskripsi, Tanggal Deadline, Waktu Deadline, Kategori (Tugas Kuliah, Ujian, Projek, Organisasi, Personal, dll), Status (Belum Selesai/Selesai), Prioritas (Mendesak, Tinggi, Sedang, Rendah).
+
+Checklist/Sub-tugas: Memecah tugas besar menjadi langkah-langkah kecil.
+
+Kategori & Filter Akademik:
+
+Kategori default: Nama Mata Kuliah (Pengguna bisa menambah sendiri).
+
+Filter tugas berdasarkan: Mata Kuliah, Prioritas, Deadline, Status Selesai/Belum.
+
+Sortir berdasarkan: Deadline terdekat, Prioritas, Tanggal dibuat.
+
+Sistem Pengingat (Reminder):
+
+Notifikasi push di waktu tertentu sebelum deadline (misal: 1 hari sebelumnya, 3 jam sebelumnya).
+
+Bisa diatur per tugas.
+
+Kalender Sederhana/View Agenda:
+
+Tampilan kalender bulanan yang menampilkan titik (dot) pada tanggal yang ada deadline.
+
+Ketuk tanggal untuk melihat daftar tugas pada hari itu.
+
+Profil & Konfigurasi:
+
+Login/Register sederhana (email/mahasiswa, password).
+
+Halaman profil dengan Nama, NIM, Fakultas/Prodi (opsional).
+
+Pengaturan tema (Light/Dark Mode), pengaturan notifikasi.
+
+Fitur Pengembangan (Versi 2.0)
+Lampiran & Dokumentasi:
+
+Tambah lampiran foto (misal: foto slide tugas, buku referensi) atau file PDF ke tugas.
+
+Penyimpanan lokal/dasar.
+
+Statistik & Progress Tracking:
+
+Grafik sederhana: Jumlah tugas diselesaikan per minggu/bulan.
+
+Persentase penyelesaian tugas per mata kuliah.
+
+Pencapaian (Achievements) menyenangkan: "Raja Deadline", "Minggu Produktif", dll.
+
+Kolaborasi Tugas Kelompok (Basic):
+
+Membuat "Tugas Grup" dan membagikan kode/link ke anggota.
+
+Anggota bisa melihat dan menandai sub-tugas (read-only atau dengan izin terbatas).
+
+Integrasi Jadwal Kuliah (Manual):
+
+Fitur untuk memasukkan jadwal kuliah tetap (Hari, Mata Kuliah, Waktu, Ruangan).
+
+Tampilan jadwal mingguan sederhana di halaman beranda.
+
+Fitur Lanjutan (Visi)
+Backup & Sinkronisasi Cloud: Akun bisa dipakai di banyak device.
+
+Integrasi dengan Kalender Eksternal (Google Calendar/iCal).
+
+AI Suggestion: Usulan pembagian waktu atau pengingat berdasarkan kebiasaan pengguna.
+
+Forum/Sharing Tips (Komunitas UNPER): Tempat berbagi tips produktivitas antar mahasiswa.
+
+Penjelasan Tampilan Aplikasi (UI/UX)
+1. Halaman Login/Register:
+
+Logo UNPER dan nama aplikasi.
+
+Form sederhana: Email/NIM dan Password.
+
+Tombol "Login" dan "Register".
+
+Opsi "Lupa Password?".
+
+2. Beranda (Home) - Tampilan Default:
+
+Header: Salam (Selamat Pagi, [Nama]) dan tanggal hari ini.
+
+Quick Stats: Kartu kecil menampilkan "Total Tugas Aktif", "Deadline Hari Ini", "Tugas Telat".
+
+Section "Tugas Mendesak/Hari Ini": Daftar tugas yang deadline-nya hari ini atau prioritas "Mendesak", dalam bentuk card.
+
+Tombol Aksi Utama (FAB - Floating Action Button): Tombol besar "+" di pojok kanan bawah untuk menambah tugas cepat.
+
+Navigasi Bottom Bar: Ikon untuk Beranda, Kalender, Tambah, Statistik, Profil.
+
+3. Halaman Daftar Semua Tugas:
+
+Search Bar: Di atas untuk mencari tugas.
+
+Filter & Sort Button: Ikon filter di samping search bar.
+
+List/Grid Tugas: Setiap tugas berupa card dengan:
+
+Warna strip kiri sesuai prioritas (Merah=Mendesak, dsb).
+
+Checkbox bulat di kiri untuk menandai selesai.
+
+Judul tugas, mata kuliah (dalam label kecil), dan deadline.
+
+Ikon lampiran jika ada.
+
+Swipe gesture: Geser kiri untuk hapus, geser kanan untuk edit/tandai.
+
+4. Halaman Tambah/Edit Tugas:
+
+Form input satu layar penuh dengan field:
+
+Input Judul (placeholder: "Tulis judul tugas...")
+
+Input Deskripsi (multi-line).
+
+Picker untuk Pilih Mata Kuliah/Kategori.
+
+Picker untuk Tanggal & Waktu Deadline.
+
+Segmented Control/Picker untuk Pilih Prioritas.
+
+Toggle untuk "Aktifkan Pengingat".
+
+Tombol "Tambah Sub-tugas".
+
+Tombol "Lampirkan File/Foto".
+
+Tombol "Simpan" dan "Batal".
+
+5. Halaman Kalender/Agenda:
+
+Tampilan kalender bulanan di bagian atas.
+
+Tanggal dengan deadline ditandai titik berwarna (sesuai prioritas).
+
+Bagian bawah: Daftar tugas untuk tanggal yang dipilih (mirip dengan halaman beranda).
+
+6. Halaman Statistik:
+
+Grafik batang atau garis untuk "Produktivitas 30 Hari Terakhir".
+
+Donut chart untuk "Distribusi Tugas per Mata Kuliah".
+
+Daftar pencapaian (Achievements) yang sudah dan belum didapat.
+
+7. Halaman Profil & Pengaturan:
+
+Foto profil, Nama, NIM, Prodi.
+
+Section Pengaturan: Tema Gelap/Terang, Pengaturan Notifikasi, Kebijakan Privasi, Cara Penggunaan.
+
+Tombol "Keluar".
+
+Warna & Tema:
+
+Warna Primer: Menggunakan warna khas UNPER (misal: Biru & Merah - perlu konfirmasi identitas resmi). Contoh: Biru tua (#003366) sebagai aksen utama.
+
+Warna Pendukung: Hijau untuk status selesai, Merah untuk prioritas mendesak, Kuning/Oranye untuk tinggi.
+
+Desain: Clean, modern, dengan banyak ruang putih (spasi). Font mudah dibaca (misal: Poppins atau Inter).
+
+Ringkasan Aplikasi (Elevator Pitch)
+"Mahasiswa UNPER" adalah aplikasi manajemen tugas pintar yang dibuat khusus untuk membantu mahasiswa Universitas Perjuangan mengatasi kesibukan akademik. Dengan fitur utama pengelompokan tugas berdasarkan mata kuliah, pengingat deadline yang cerdas, dan pelacakan produktivitas, aplikasi ini bertujuan menjadi asisten digital pribadi setiap mahasiswa UNPER. Antarmukanya yang sederhana dan intuitif, dikombinasikan dengan fungsionalitas yang powerful, memastikan pengguna dapat fokus pada hal yang penting: belajar dan meraih prestasi tanpa khawatir tertinggal tugas.
+
+Nilai Pembeda: Kustomisasi untuk konteks kampus UNPER, penekanan pada kebutuhan akademik yang spesifik, dan rencana pengembangan fitur kolaborasi dan komunitas yang memperkuat ekosistem mahasiswa UNPER itu sendiri.

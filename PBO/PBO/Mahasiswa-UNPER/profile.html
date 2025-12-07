@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Pengguna - Mahasiswa UNPER</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-content">
+                <h1>Profil Saya</h1>
+                <p>Atur informasi pribadi dan pengaturan aplikasi</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="profile-info">
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <div style="width: 100px; height: 100px; background: var(--primary-color); border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h2 id="user-name">Nama Pengguna</h2>
+                    <p id="user-id">NIM: 1234567890</p>
+                    <p id="user-major">Informatika, Fakultas Teknologi Informasi</p>
+                </div>
+            </section>
+            
+            <section class="settings-section">
+                <h2 style="margin-bottom: 15px;">Pengaturan</h2>
+                
+                <div class="setting-item" style="background: var(--bg-white); padding: 15px; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span>Tema Gelap</span>
+                        <label class="switch" style="position: relative; display: inline-block; width: 50px; height: 24px;">
+                            <input type="checkbox" id="dark-theme-toggle">
+                            <span class="slider round" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 24px;">
+                                <span style="position: absolute; content: ''; height: 16px; width: 16px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%;"></span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="setting-item" style="background: var(--bg-white); padding: 15px; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span>Pengaturan Notifikasi</span>
+                        <label class="switch" style="position: relative; display: inline-block; width: 50px; height: 24px;">
+                            <input type="checkbox" id="notifications-toggle" checked>
+                            <span class="slider round" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: .4s; border-radius: 24px;">
+                                <span style="position: absolute; content: ''; height: 16px; width: 16px; left: 4px; bottom: 4px; background-color: white; transition: .4s; border-radius: 50%;"></span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                
+                <a href="#" class="setting-item" style="display: block; background: var(--bg-white); padding: 15px; border-radius: 8px; margin-bottom: 10px; text-decoration: none; color: var(--text-dark); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span>Kebijakan Privasi</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+                
+                <a href="#" class="setting-item" style="display: block; background: var(--bg-white); padding: 15px; border-radius: 8px; margin-bottom: 10px; text-decoration: none; color: var(--text-dark); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span>Cara Penggunaan</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+                
+                <a href="#" class="setting-item" style="display: block; background: var(--bg-white); padding: 15px; border-radius: 8px; margin-bottom: 10px; text-decoration: none; color: var(--text-dark); box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span>Tentang Aplikasi</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </a>
+                
+                <button class="btn btn-outline" id="logout-btn" style="width: 100%; margin-top: 20px;">
+                    <i class="fas fa-sign-out-alt"></i> Keluar
+                </button>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="home.html" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>Beranda</span>
+            </a>
+            <a href="calendar.html" class="nav-item">
+                <i class="fas fa-calendar"></i>
+                <span>Kalender</span>
+            </a>
+            <a href="add_task.html" class="nav-item">
+                <i class="fas fa-plus-circle"></i>
+                <span>Tambah</span>
+            </a>
+            <a href="tasks.html" class="nav-item">
+                <i class="fas fa-tasks"></i>
+                <span>Tugas</span>
+            </a>
+            <a href="profile.html" class="nav-item active">
+                <i class="fas fa-user"></i>
+                <span>Profil</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>
